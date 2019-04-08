@@ -1,14 +1,14 @@
 <?php
-class Spanacom{
+class Datalyse{
     private $apikey;
     private $debug = false;
     private $ch;
-    public $root = 'https://api.spanads.com/api/1.0';
+    public $root = 'https://app.datalyse.io/api/1.0';
     public function __construct($apikey=null) {
         
     $this->apikey=$apikey;
         $this->ch = curl_init();
-        curl_setopt($this->ch, CURLOPT_USERAGENT, 'Spanacom-PHP/1.0.54');
+        curl_setopt($this->ch, CURLOPT_USERAGENT, 'Datalyse-PHP/1.0.54');
         curl_setopt($this->ch, CURLOPT_POST, true);
         curl_setopt($this->ch, CURLOPT_FOLLOWLOCATION, false);
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYPEER, false);
