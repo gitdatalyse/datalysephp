@@ -33,7 +33,6 @@ class Datalyse{
         $ch = $this->ch;
         $func = str_replace("_","/",$func);
         curl_setopt($ch, CURLOPT_URL, $this->root . '/'.$func . '.json');
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
         curl_setopt($ch, CURLOPT_POSTFIELDS, $paramshttp);
         curl_setopt($ch, CURLOPT_VERBOSE, $this->debug);
         
