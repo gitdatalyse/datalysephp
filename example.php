@@ -1,16 +1,16 @@
 <?php
 require_once "api.php";
-$spanacom = new Spanacom("YOUR_API_KEY");
+$datalyse = new Datalyse("YOUR_API_KEY");
 try {
 $params= array("to"=> "34638638638",
 "from"=> "FROMSPA",
 "text"=> "Hello world to msg");
 
-$response=$spanacom->smsmt_send($params);
- echo "<br/><br/>SpanacomAPIOK:<br/>";
+$response=$datalyse->sendsms_smsmt($params);
+ echo "<br/><br/>DatalyseAPIOK:<br/>";
 print_r($response);
 } catch(Exception $e) {
-echo "<br/><br/>SpanacomAPIerror:<br/>"; 
+echo "<br/><br/>DatalyseAPIerror:<br/>"; 
 print_r($e);
 }
 ?>
