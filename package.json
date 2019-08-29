@@ -1,0 +1,25 @@
+{
+  "name": "datalysephp",
+  "version": "0.0.6",
+  "description": "...",
+  "main": "api.php",
+  "author": "datalyse group ltd",
+  "keywords": [
+    "datalysephp"
+  ],
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitdatalyse/datalysephp.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitdatalyse/datalysephp/issues"
+  },
+  "homepage": "https://github.com/gitdatalyse/datalysephp#readme"
+}

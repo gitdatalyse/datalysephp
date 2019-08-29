@@ -1,12 +1,10 @@
 <?php
 class Datalyse{
-    private $apikey;
     private $debug = false;
     private $ch;
     public $root = 'https://app.datalyse.io/api/1.0';
-    public function __construct($apikey=null) {
+    public function __construct() {
         
-    $this->apikey=$apikey;
         $this->ch = curl_init();
         curl_setopt($this->ch, CURLOPT_USERAGENT, 'Datalyse-PHP/1.0.54');
         curl_setopt($this->ch, CURLOPT_POST, true);
@@ -28,7 +26,6 @@ class Datalyse{
     }
     }
     function __call($func, $params){
-        $params[0]['apikey']=$this->apikey;
         $paramshttp = json_encode((object)$params[0]);
         $ch = $this->ch;
         $func = str_replace("_","/",$func);

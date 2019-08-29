@@ -1,8 +1,9 @@
 <?php
 require_once "api.php";
-$datalyse = new Datalyse("YOUR_API_KEY");
+$datalyse = new Datalyse();
 try {
-$params= array("to"=> "34638638638",
+$params= array("token"=> "TOKEN_API_HERE",
+"to"=> "34682288834",
 "from"=> "FROMSPA",
 "text"=> "Hello world to msg");
 
