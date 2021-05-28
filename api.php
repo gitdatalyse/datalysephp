@@ -26,7 +26,18 @@ class Datalyse{
     }
     }
     function __call($func, $params){
-        $paramshttp = json_encode((object)$params[0]);
+        $paramshttp_antes = $params[0];
+        //print_r($paramshttp_era);
+        $paramshttp_era= Array();
+        foreach($paramshttp_antes as $este=>$valooo){
+            $paramshttp_era[$este]=urlencode($valooo);
+        }
+        //echo "Hola";
+        //print_r($paramshttp_era);
+        $paramshttp = json_encode((object)$paramshttp_era);
+
+        //print_r($paramshttp);
+
         $ch = $this->ch;
         $func = str_replace("_","/",$func);
         curl_setopt($ch, CURLOPT_URL, $this->root . '/'.$func . '.json');
